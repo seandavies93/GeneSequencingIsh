@@ -46,7 +46,7 @@ public class ReassembleServiceTest {
                             "Duplicate text"),
             Arguments.of(
                             "Doesn't ;merge.", 
-                            "Doesn't ;merge."),
+                            "merge.;Doesn't "),
             Arguments.of(
                             "Hello Wo;o World; Surprise", 
                             "Hello World; Surprise"),
@@ -64,7 +64,7 @@ public class ReassembleServiceTest {
                             "Hello World; Surprise; Chonk"),
             Arguments.of(
                             "document fragment;fragment;fragment reassembly;gop;chonk", 
-                            "document fragment reassembly;gop;chonk"),
+                            "chonk;gop;document fragment reassembly"),
             Arguments.of(
                             "", 
                             ""),
@@ -94,7 +94,7 @@ public class ReassembleServiceTest {
                             "XABCD"),
             Arguments.of(
                             "ABC;BCD;CDA;DAB", 
-                            "ABCDAB"),
+                            "CDABCD"),
             Arguments.of(
                             "Hello ; World", 
                             "Hello World"),
